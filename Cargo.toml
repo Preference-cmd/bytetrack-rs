@@ -13,7 +13,7 @@ lapjv = "0.3"
 thiserror = "2"
 
 # Optional: Burn inference backend
-burn = { version = "0.16", optional = true, default-features = false, features = [
+burn = { version = "0.20", optional = true, default-features = false, features = [
     "ndarray",
 ] }
 
