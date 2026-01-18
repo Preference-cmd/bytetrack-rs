@@ -1,0 +1,22 @@
+[package]
+name = "bytetrack-rs"
+version = "0.1.0"
+authors = ["Pref2rence <sq103832@outlook.com>"]
+description = "A Rust implementation of ByteTrack algorithm originally published by ByteDance"
+license = "MIT"
+edition = "2024"
+
+[dependencies]
+ndarray = { version = "0.16", features = ["serde"] }
+nalgebra = { version = "0.33", features = ["std"] }
+lapjv = "0.3"
+thiserror = "2"
+
+# Optional: Burn inference backend
+burn = { version = "0.16", optional = true, default-features = false, features = [
+    "ndarray",
+] }
+
+[features]
+default = []
+burn-backend = ["burn"]
